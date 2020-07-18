@@ -1,0 +1,1 @@
+web: gunicorn QuizUp.wsgi --log-file -
