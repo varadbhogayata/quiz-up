@@ -34,35 +34,20 @@
             </div>
             
             {% if user.is_authenticated %}
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ user.username }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
-                <a class="dropdown-item" href="#">My account</a>
-                <a class="dropdown-item" href="#">Change password</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
-                </div>
-            </li>
-            </ul>
-            {% else %}
-                <form class="form-inline ml-auto">
-                <a href="{% url 'login' %}" class="btn btn-outline-light">Log in</a>
-                <a href="{% url 'signup' %}" class="btn btn-light ml-2">Sign up</a>
-                </form>
-            {% endif %}
-
-            <!-- <div class="collapse navbar-collapse justify-content-end" id="navbar">
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
                 {% if request.user.is_active %}
                 <h5 class="text-white mt-3 mx-2">Hi, {{ request.user.username }}</h5>
                 <a href="{% url 'logout' %}" class="btn btn-danger mt-2 mx-2"> Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                 {% else %}
                 <a href="{% url 'login' %}" class="btn btn-light mt-2"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</a>
                 {% endif %}
-                
-            </div> -->
+            </div>
+            {% else %}
+                <form class="form-inline ml-auto">
+                <a href="{% url 'login' %}" class="btn btn-outline-light">Log in</a>
+                <a href="{% url 'signup' %}" class="btn btn-light ml-2">Sign up</a>
+                </form>
+            {% endif %}
         </div>
 
     </nav>
