@@ -14,7 +14,7 @@ djangorestframework==3.11.0
 hiredis==1.0.1
 idna==2.10
 oauthlib==3.1.0
-Pillow==7.2.0
+Pillow==8.2.0
 pycparser==2.20
 python-slugify==4.0.1
 python3-openid==3.2.0
